@@ -2,7 +2,7 @@
 
 L'architecture de la base de donnée de l'app de blogging est la suivante :
 
-- L'application va accueillir plusieurs user et ils auront tous un nom.
+### L'application va accueillir plusieurs user et ils auront tous un nom.
 
 CREATE TABLE ‘user’ (
 ‘id’ INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -10,7 +10,7 @@ CREATE TABLE ‘user’ (
 );
 
 
-- Chaque utilisateur peut créer plusieurs article et chaque article est forcément créé par un user.
+### Chaque utilisateur peut créer plusieurs article et chaque article est forcément créé par un user.
 
 CREATE TABLE ‘article’ (
 ‘Id’ INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -21,7 +21,7 @@ FOREIGN KEY (user_id) REFERENCES user(id));
 La relation entre la table article et user est de 1,n : un user pour un article. Dans ce cas, on doit integrer une foreign key dans la table qui a cette relation unique c-à-d la table article. 
 
 
-- Un article peut appartenir à plusieurs category ; chaque category a un titre.
+### Un article peut appartenir à plusieurs category ; chaque category a un titre.
 
 CREATE TABLE 'category' (
   'id' INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -37,7 +37,7 @@ CREATE TABLE 'article_category' (
   FOREIGN KEY(id_category) REFERENCES category(id)
   );
 
-- Une catégorie peut appartenir à plusieurs tag ; chaque tag a un titre et une couleur.
+### Une catégorie peut appartenir à plusieurs tag ; chaque tag a un titre et une couleur.
 
 CREATE TABLE 'tag' (
    ...> 'id' INTEGER PRIMARY KEY AUTOINCREMENT,
