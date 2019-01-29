@@ -1,6 +1,6 @@
-## Description de la DataBase de Blog avec SQLITE3
+# Description de la DataBase de Blog avec SQLITE3
 
-L'architecture de la base de donnée de l'app de blogging est la suivante :
+## L'architecture de la base de donnée de l'app de blogging est la suivante :
 
 ### L'application va accueillir plusieurs user et ils auront tous un nom.
 
